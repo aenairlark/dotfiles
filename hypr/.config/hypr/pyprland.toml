@@ -1,0 +1,63 @@
+[pyprland]
+plugins = [
+ # "expose",
+ # "fetch_client_menu",
+ # "lost_windows",
+ # "magnify",
+ "scratchpads",
+ # "shift_monitors",
+ # "toggle_special",
+ # "workspaces_follow_focus",
+]
+
+# using variables for demonstration purposes (not needed)
+[pyprland.variables]
+term_classed = "kitty --class"
+
+[scratchpads.term]
+animation = "fromTop"
+command = "[term_classed] main-dropterm"
+class = "main-dropterm"
+size = "70% 60%"
+max_size = "1920px 100%"
+unfocus = "hide"
+
+[scratchpads.volume]
+animation = "fromBottom"
+command = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
+lazy = true
+size = "40% 60%"
+unfocus = "hide"
+
+[scratchpads.bluetuith]
+animation = "fromBottom"
+command = "kitty -e bluetuith"
+class = "kitty"
+lazy = true
+size = "40% 50%"
+unfocus = "hide"
+
+[scratchpads.iwgtk]
+animation = "fromBottom"
+command = "iwgtk"
+class = "org.twosheds.iwgtk"
+lazy = true
+size = "40% 50%"
+unfocus = "hide"
+
+[scratchpads.clock]
+animation = ""
+command = "kitty -e tty-clock -D -c -b -C 4"
+class = "kitty"
+lazy = true
+size = "18% 14%"
+unfocus = "hide"
+
+[scratchpads.btop]
+animation = ""
+command = "kitty -e btop"
+class = "kitty"
+lazy = true
+size = "50% 50%"
+unfocus = "hide"

@@ -1,0 +1,6 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nmap ge scrollToBottom\nunmap G\nunmap f\nmap gw LinkHints.activateMode",
+  "linkHintCharacters": "wersdfhjkumnbvcx",
+  "searchUrl": "https://www.duckduckgo.com/?q=",
+  "settingsVersion": "2.1.2"
+}
