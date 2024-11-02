@@ -18,7 +18,6 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 #PATH
-source /etc/profile.d/nix.sh
 export PATH="$PATH:/home/asim/.cargo/bin"
 
 # Add in Powerlevel10k
@@ -123,4 +122,5 @@ alias timeshiftgtk='sudo -E timeshift-gtk'
 alias c='clear'
 alias bon='sudo systemctl start bluetooth.service'
 alias boff='sudo systemctl stop bluetooth.service'
+alias cat='bat'
 
