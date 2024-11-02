@@ -12,7 +12,7 @@ plugins = [
 
 # using variables for demonstration purposes (not needed)
 [pyprland.variables]
-term_classed = "kitty --class"
+term_classed = "alacritty --class"
 
 [scratchpads.term]
 animation = "fromTop"
@@ -32,8 +32,8 @@ unfocus = "hide"
 
 [scratchpads.bluetuith]
 animation = "fromBottom"
-command = "kitty -e bluetuith"
-class = "kitty"
+command = "alacritty -e bluetuith"
+class = "alacritty"
 lazy = true
 size = "40% 50%"
 unfocus = "hide"
@@ -48,16 +48,16 @@ unfocus = "hide"
 
 [scratchpads.clock]
 animation = ""
-command = "kitty -e tty-clock -D -c -b -C 4"
-class = "kitty"
+command = "alacritty -e tty-clock -D -c -b -C 4"
+class = "alacritty"
 lazy = true
 size = "18% 14%"
 unfocus = "hide"
 
 [scratchpads.btop]
 animation = ""
-command = "kitty -e btop"
-class = "kitty"
+command = "alacritty -e btop"
+class = "alacritty"
 lazy = true
 size = "50% 50%"
 unfocus = "hide"
