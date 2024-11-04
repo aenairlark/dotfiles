@@ -32,8 +32,8 @@ unfocus = "hide"
 
 [scratchpads.bluetuith]
 animation = "fromBottom"
-command = "alacritty -e bluetuith"
-class = "alacritty"
+command = "[term_classed] bluetuith -e bluetuith"
+class = "bluetuith"
 lazy = true
 size = "40% 50%"
 unfocus = "hide"
@@ -48,16 +48,16 @@ unfocus = "hide"
 
 [scratchpads.clock]
 animation = ""
-command = "alacritty -e tty-clock -D -c -b -C 4"
-class = "alacritty"
+command = "kitty --class tty-clock -e tty-clock -D -c -b -C 4"
+class = "tty-clock" #alacritty dosent like tty-clock for some reason using pypr
 lazy = true
-size = "18% 14%"
+size = "18% 16%"
 unfocus = "hide"
 
 [scratchpads.btop]
 animation = ""
-command = "alacritty -e btop"
-class = "alacritty"
+command = "[term_classed] btop -e btop"
+class = "btop"
 lazy = true
-size = "50% 50%"
+size = "45% 50%"
 unfocus = "hide"
