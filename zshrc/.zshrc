@@ -123,4 +123,6 @@ alias c='clear'
 alias bon='sudo systemctl start bluetooth.service'
 alias boff='sudo systemctl stop bluetooth.service'
 alias cat='bat'
+alias power-saver='powerprofilesctl set power-saver'
+alias balanced='powerprofilesctl set balanced'
 
