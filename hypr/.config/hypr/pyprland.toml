@@ -50,6 +50,6 @@ unfocus = "hide"
 animation = ""
 command = "[term_classed] btop -e btop"
 class = "btop"
-lazy = true
+lazy = false
 size = "45% 50%"
 unfocus = "hide"
