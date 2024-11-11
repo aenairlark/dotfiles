@@ -67,14 +67,14 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-# Quick cd using fzf
+#Quick cd using fd
 fc() {
-  cd "$(find -type d | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
+  cd "$(fd | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
 }
 
 # Find and edit using fzf
 fe() {
-  helix "$(find -type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
+  helix "$(fd --type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
 
 fm() {

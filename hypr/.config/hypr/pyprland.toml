@@ -1,8 +1,10 @@
 [pyprland]
 plugins = [
  "scratchpads",
+ "fetch_client_menu"
 ]
-
+[pyprland.fetch_client_menu]
+command = "fetch_client_menu"
 [pyprland.variables]
 term_classed = "alacritty --class"
 
