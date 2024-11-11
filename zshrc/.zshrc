@@ -67,7 +67,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-#Quick cd using fd
+#Quick cd using fd, it respects .ignore .gitignore
 fc() {
   cd "$(fd | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
 }
@@ -77,7 +77,7 @@ fe() {
   helix "$(fd --type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
 
-fm() {
+fo() {
 	RG_PREFIX="rga --files-with-matches"
 	local file
 	file="$(
