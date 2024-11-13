@@ -19,7 +19,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: #b9b1e2;
+	background-color: #09b1e2;
 	outline-style: none;
 }
 
