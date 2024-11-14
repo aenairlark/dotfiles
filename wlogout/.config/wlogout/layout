@@ -1,15 +1,20 @@
-{
-    "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
-    "text" : "        "     
-}
-
-{
+ {
     "label" : "lock",
     "action" : "loginctl lock-session",
     "text" : "        "
 }
 
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "        "    
+}
+
+{
+    "label" : "logout",
+    "action" : "loginctl terminate-user $USER",
+    "text" : "        "     
+}
 
 {
     "label" : "shutdown",
@@ -21,10 +26,4 @@
     "label" : "reboot",
     "action" : "systemctl reboot",
     "text" : "        "     
-}
-
-{
-    "label" : "suspend",
-    "action" : "systemctl suspend",
-    "text" : "        "    
 }
