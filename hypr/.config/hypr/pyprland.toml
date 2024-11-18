@@ -9,13 +9,22 @@ command = "fetch_client_menu"
 [pyprland.variables]
 term_classed = "alacritty --class"
 
-# [scratchpads.term]
-# animation = "fromTop"
-# command = "[term_classed] main-dropterm"
-# class = "main-dropterm"
-# size = "70% 60%"
-# max_size = "1920px 100%"
-# unfocus = "hide"
+[scratchpads.term]
+animation = "fromRight"
+command = "[term_classed] main-dropterm"
+class = "main-dropterm"
+size = "70% 50%"
+max_size = "1920px 100%"
+unfocus = "hide"
+
+[scratchpads.editor]
+animation = "fromRight"
+command = "[term_classed] helix -e helix"
+class = "helix"
+size = "40% 50%"
+position = "59% 2%"
+max_size = "1920px 100%"
+unfocus = "hide"
 
 [scratchpads.volume]
 animation = "fromBottom"

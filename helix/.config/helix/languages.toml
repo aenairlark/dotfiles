@@ -1,10 +1,7 @@
-# [language-server.superhtml-lsp]
-# command = "superhtml"
-# args = ["lsp"]
+[language-server.emmet-ls]
+args = ["--stdio"]
+command="emmet-ls"
 
-# [[language]]
-# name = "html"
-# scope = "source.html"
-# roots = []
-# file-types = ["html"]
-# language-servers = [ "superhtml-lsp" ]
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls"]

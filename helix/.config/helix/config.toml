@@ -73,7 +73,6 @@ x = ":buffer-close"
 [keys.insert]
 A-tab = "goto_next_buffer"
 A-S-tab = "goto_previous_buffer"
-A-h = "delete_word_backward"
 C-h = "move_char_left" 
 C-l = "move_char_right" 
 
