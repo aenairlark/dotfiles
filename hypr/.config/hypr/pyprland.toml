@@ -10,10 +10,10 @@ command = "fetch_client_menu"
 term_classed = "alacritty --class"
 
 [scratchpads.term]
-animation = "fromRight"
+animation = "fromTop"
 command = "[term_classed] main-dropterm"
 class = "main-dropterm"
-size = "70% 50%"
+size = "65% 55%"
 max_size = "1920px 100%"
 unfocus = "hide"
 
