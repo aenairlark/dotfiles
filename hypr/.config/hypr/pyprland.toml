@@ -15,16 +15,20 @@ command = "[term_classed] main-dropterm"
 class = "main-dropterm"
 size = "65% 55%"
 max_size = "1920px 100%"
+preserve_aspect = true
 unfocus = "hide"
+lazy = true
 
 [scratchpads.editor]
-animation = "fromRight"
+animation = ""
 command = "[term_classed] helix -e helix"
 class = "helix"
 size = "40% 50%"
 position = "59% 2%"
+preserve_aspect = true
 max_size = "1920px 100%"
 unfocus = "hide"
+lazy = true
 
 [scratchpads.volume]
 animation = "fromBottom"
@@ -52,8 +56,8 @@ unfocus = "hide"
 
 [scratchpads.clock]
 animation = ""
-command = "kitty --class tty-clock -e tty-clock -D -c -b -C 4"
-class = "tty-clock" #alacritty dosent like tty-clock for some reason using pypr
+command = "alacritty --class tty-clock -e tty-clock -D"
+class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
 lazy = true
 size = "16% 14%"
 unfocus = "hide"
@@ -62,6 +66,6 @@ unfocus = "hide"
 animation = ""
 command = "[term_classed] btop -e btop"
 class = "btop"
-lazy = false
+lazy = true
 size = "45% 50%"
 unfocus = "hide"
