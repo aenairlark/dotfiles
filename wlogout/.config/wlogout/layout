@@ -17,6 +17,12 @@
 }
 
 {
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "        "     
+}
+
+{
     "label" : "shutdown",
     "action" : "systemctl poweroff",
     "text" : "        "
@@ -27,3 +33,4 @@
     "action" : "systemctl reboot",
     "text" : "        "     
 }
+
