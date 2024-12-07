@@ -20,11 +20,10 @@ unfocus = "hide"
 lazy = true
 
 [scratchpads.editor]
-animation = ""
+animation = "fromTop"
 command = "[term_classed] helix -e helix"
 class = "helix"
-size = "40% 50%"
-position = "59% 2%"
+size = "45% 50%"
 preserve_aspect = true
 max_size = "1920px 100%"
 unfocus = "hide"

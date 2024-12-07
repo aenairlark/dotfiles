@@ -73,13 +73,36 @@
   min-width: 5px;
 
 }
+#idle_inhibitor.activated {
+  color: yellow;
+  background: #647072; 
+}
+#battery {
+  color: black;
+  background-color: #647072;
+}
 
+#battery.concerning { background: yellow; }
+#battery.warning { background: orange; }
+#battery.critical { background: red; }
+
+#bluetooth{
+  color: #00d4ff;  
+}
+
+#backlight {
+  color: #9af549;
+}
 #custom-notification {
   font-family: "JetBrainsMono Nerd Font";
 }
 
 #pulseaudio.muted {
   color: @base0F;
+}
+
+#pulseaudio {
+  color: #00ffa2;
 }
 
 #pulseaudio.bluetooth {

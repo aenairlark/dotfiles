@@ -65,7 +65,7 @@
                     "command": "hyprctl dispatch exit"
                 },
                 {
-                    "label": "󰤄",
+                    "label": "",
                     "command": "systemctl suspend"
                 }
             ]

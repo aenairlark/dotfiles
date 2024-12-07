@@ -12,7 +12,7 @@
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
-        "hyprland/submap",
+         "hyprland/submap",
          "custom/notification",
          "network",
          "bluetooth",
@@ -110,8 +110,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+        "format-alt": "{:%d-%m-%Y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -135,12 +135,12 @@
     },
     "battery": {
         "states": {
-            "good": 95,
+            "concerning":45,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  󱐋",
+        "format-charging": "{capacity}% 󱐋",
         "format-plugged": "{capacity}%  ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -152,7 +152,7 @@
     },
     "network": {
         "interface": "wlan0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid}  ",
+        "format-wifi": " ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -162,8 +162,10 @@
     },
      "bluetooth": {
 	"format": " {status}",
-	"format-disabled": "", // an empty format will hide the module
-	"format-connected": " {num_connections} connected",
+	"format-disabled": "󰂲", // an empty format will hide the module
+	"format-connected": " connected",
+    "format-no-controller": "󰂲",  
+    "tooltip-format-no-controller":"no-controller", //run systemctl start bluetooth
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -171,20 +173,17 @@
 },
     "pulseaudio": {
         // "scroll-step": 10, // %, can be a float
-        "format": "{volume}%{icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " 󰖁 {icon} {format_source}",
-        "format-muted": " 󰖁 {format_source}",
+        "format": "{volume}%{icon}{format_source}",
+        "format-bluetooth": "{volume}% {icon}{format_source}",
+        "format-bluetooth-muted": " 󰖁 {icon}{format_source}",
+        "format-muted": "󰖁{format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": " ",
+        "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": " ",
             "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headset": " ",
+            "default": [" 󰕿"," 󰖀", " 󰕾"]
         },
         "on-click": "pypr toggle volume"
     },
@@ -192,14 +191,14 @@
         "tooltip": true,
         "format": "{} {icon}",
         "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span> ",
-            "none": " ",
-            "dnd-notification": "<span foreground='red'><sup></sup></span> ",
-            "dnd-none": " ",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span> ",
-            "inhibited-none": " ",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span> ",
-            "dnd-inhibited-none": " "
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
