@@ -71,8 +71,12 @@
   background-color: @base02;
   border-radius: 4px;
   min-width: 5px;
-
 }
+#network.disconnected {
+  background-color: yellow;
+  color: black;
+}
+
 #idle_inhibitor.activated {
   color: yellow;
   background: #647072; 
@@ -83,7 +87,7 @@
 }
 
 #battery.concerning { background: yellow; }
-#battery.warning { background: orange; }
+#battery.warning { background: #ff4500; }
 #battery.critical { background: red; }
 
 #bluetooth{

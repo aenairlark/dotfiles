@@ -21,7 +21,7 @@ lazy = true
 
 [scratchpads.editor]
 animation = "fromTop"
-command = "[term_classed] helix -e helix"
+command = "[term_classed] helix --title helix -e helix"
 class = "helix"
 size = "45% 50%"
 preserve_aspect = true
@@ -39,19 +39,19 @@ unfocus = "hide"
 
 [scratchpads.bluetuith]
 animation = "fromBottom"
-command = "[term_classed] bluetuith -e bluetuith"
+command = "[term_classed] bluetuith --title bluetuith -e bluetuith"
 class = "bluetuith"
 lazy = true
 size = "40% 50%"
 unfocus = "hide"
 
-[scratchpads.iwgtk]
-animation = "fromBottom"
-command = "iwgtk"
-class = "org.twosheds.iwgtk"
-lazy = true
-size = "40% 50%"
-unfocus = "hide"
+# [scratchpads.iwgtk]
+# animation = "fromBottom"
+# command = "iwgtk"
+# class = "org.twosheds.iwgtk"
+# lazy = true
+# size = "40% 50%"
+# unfocus = ""
 
 [scratchpads.clock]
 animation = ""
@@ -63,7 +63,7 @@ unfocus = "hide"
 
 [scratchpads.btop]
 animation = ""
-command = "[term_classed] btop -e btop"
+command = "[term_classed] btop --title btop -e btop"
 class = "btop"
 lazy = true
 size = "45% 50%"

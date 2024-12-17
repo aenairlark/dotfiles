@@ -43,7 +43,6 @@
          }
      },
 
-     
     "keyboard-state": {
         "numlock": false,
         "capslock": false,
@@ -136,8 +135,8 @@
     "battery": {
         "states": {
             "concerning":45,
-            "warning": 30,
-            "critical": 15
+            "warning": 35,
+            "critical": 20
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󱐋",
@@ -158,7 +157,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠ ",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "pypr toggle iwgtk"
+        "on-click": "iwgtk"
     },
      "bluetooth": {
 	"format": " {status}",
