@@ -85,7 +85,7 @@ fo() {
 			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
 				--phony -q "$1" \
 				--bind "change:reload:$RG_PREFIX {q}" \
-				--preview-window="70%:wrap"
+				--preview-window="up:75%"
 	)" &&
 	echo "opening $file" &&
 	xdg-open "$file"
@@ -122,7 +122,7 @@ alias grep='grep --color=auto'
 alias timeshiftgtk='sudo -E timeshift-gtk'
 alias c='clear'
 alias bon='sudo systemctl start bluetooth.service'
-alias boff='sudo systemctl stop bluetooth.service'
+alias bof='sudo systemctl stop bluetooth.service'
 alias cat='bat'
 alias power-saver='powerprofilesctl set power-saver'
 alias performance='powerprofilesctl set performance'

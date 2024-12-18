@@ -1,0 +1,27 @@
+# unignore in file picker and global search
+!.bashrc
+!.zshrc
+!.config
+# ignore in file picker or global search
+.nix-defexpr
+.nix-profile
+.npm
+.icons
+.rustup
+paru
+.cargo
+.pki
+.themes/
+balenaEtcher/
+go/
+chromium/
+.pub-cache/
+.cache/
+.zen/
+.github/
+.gitignore
+.gitattributes
+.local/
+libreoffice/
+Graphite-gtk-theme/
+BraveSoftware
