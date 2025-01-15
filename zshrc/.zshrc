@@ -126,4 +126,5 @@ alias bof='sudo systemctl stop bluetooth.service'
 alias cat='bat'
 alias power-saver='powerprofilesctl set power-saver'
 alias performance='powerprofilesctl set performance'
-
+alias wg-up='sudo wg-quick up'
+alias wg-down='sudo wg-quick down'
