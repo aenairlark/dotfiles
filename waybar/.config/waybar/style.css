@@ -33,7 +33,7 @@
 }
 
 #workspaces button {
-  margin: 4px 0;
+  margin: 0px 0;
   padding: 0 4px;
   color: @base05;
 }
@@ -51,9 +51,9 @@
 }
 
 #tray {
-  margin: 4px 4px 4px 4px;
+  margin: 0px 0px 0px 0px;
   border-radius: 4px;
-  background-color: @base02;
+  background-color: @base03;
 }
 
 #tray * {
@@ -66,7 +66,7 @@
 }
 
 #mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-updates, #custom-weather, #custom-mail, #clock, #bluetooth, #temperature, #custom-notification{
-  margin: 2px 2px;
+  margin: 0px 2px;
   padding: 0 10px;
   background-color: @base02;
   border-radius: 4px;

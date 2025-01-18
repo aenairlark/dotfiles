@@ -128,3 +128,5 @@ alias power-saver='powerprofilesctl set power-saver'
 alias performance='powerprofilesctl set performance'
 alias wg-up='sudo wg-quick up'
 alias wg-down='sudo wg-quick down'
+alias update-mirrors='sudo reflector -l 15 -p https --ipv4 -c India --sort rate --save /etc/pacman.d/mirrorlist'
+
