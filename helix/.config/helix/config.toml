@@ -2,6 +2,7 @@
 # theme = "ayu_evolve"
 # theme = "material_deep_ocean"
 theme = "jetbrains_dark" 
+
 [editor]
 line-number = "absolute"
 bufferline = "multiple"
@@ -13,8 +14,9 @@ completion-trigger-len = 1
 true-color = true
 color-modes = true
 auto-pairs = true
-rulers = [100]
+rulers = [100, 100]
 idle-timeout = 50
+
 [editor.indent-guides]
 render = true
 character = "▏"
@@ -77,6 +79,7 @@ A-tab = "goto_next_buffer"
 A-S-tab = "goto_previous_buffer"
 C-h = "move_char_left" 
 C-l = "move_char_right" 
+C-o = "open_below"
 
 [keys.select]
 tab = "extend_parent_node_end"
