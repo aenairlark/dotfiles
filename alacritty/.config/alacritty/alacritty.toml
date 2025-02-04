@@ -14,7 +14,7 @@ style = {shape = "Beam",blinking = "On"}
 [mouse]
 hide_when_typing = true
 [keyboard]
-bindings = [{ key = "n",mods = "Control",action= "CreateNewWindow" }]
+bindings = [{ key = "Enter",mods = "Control",action= "CreateNewWindow" }]
 [env]
 TERM = "alacritty"
 
@@ -37,11 +37,9 @@ decorations = "Full"
 dynamic_padding = true
 opacity = 0.8
 startup_mode = "Windowed"
-title = "Alacritty"
 
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
+# [window.class]
+# general = "Alacritty"
 
 # [window.dimensions]
 # columns = 160
