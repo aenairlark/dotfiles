@@ -55,10 +55,10 @@ unfocus = "hide"
 
 [scratchpads.clock]
 animation = ""
-command = "alacritty --class tty-clock -e tty-clock -D"
+command = "alacritty --class tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
 class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
 lazy = true
-size = "16% 14%"
+size = "16% 17%"
 unfocus = "hide"
 
 [scratchpads.btop]
