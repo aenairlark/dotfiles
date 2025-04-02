@@ -14,12 +14,12 @@ completion-trigger-len = 1
 true-color = true
 color-modes = true
 auto-pairs = true
-rulers = [100, 100]
+# rulers = [100, 100]
 idle-timeout = 50
 
 [editor.indent-guides]
 render = true
-character = "▏"
+character = "┆"
 
 [editor.soft-wrap]
 enable = true
@@ -102,7 +102,7 @@ f = "file_picker"
 
 
 
-# to have key map (S-f) working follow these
+# to have key map (S-e) working follow these
 ## touch ~/.local/bin/lf-pick
 # chmod +x ~/.local/bin/lf-pick
 # or add that lf-pick file to any (echo $PATH) output directory
@@ -114,7 +114,7 @@ f = "file_picker"
 # }
 
 # lfp
-# or
+## or
 # function lfp(){
 #   local TEMP=$(mktemp)
 #   lf -selection-path=$TEMP

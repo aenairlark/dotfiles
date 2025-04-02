@@ -29,21 +29,21 @@ max_size = "1920px 100%"
 unfocus = "hide"
 lazy = true
 
-[scratchpads.volume]
-animation = "fromBottom"
-command = "pavucontrol"
-class = "org.pulseaudio.pavucontrol"
-lazy = true
-size = "40% 60%"
-unfocus = "hide"
+# [scratchpads.volume]
+# animation = "fromBottom"
+# command = "pavucontrol"
+# class = "org.pulseaudio.pavucontrol"
+# lazy = true
+# size = "40% 60%"
+# unfocus = "hide"
 
-[scratchpads.bluetuith]
-animation = "fromBottom"
-command = "[term_classed] bluetuith --title bluetuith -e bluetuith"
-class = "bluetuith"
-lazy = true
-size = "40% 50%"
-unfocus = "hide"
+# [scratchpads.bluetuith]
+# animation = "fromBottom"
+# command = "[term_classed] bluetuith --title bluetuith -e bluetuith"
+# class = "bluetuith"
+# lazy = true
+# size = "40% 50%"
+# unfocus = "hide"
 
 # [scratchpads.iwgtk]
 # animation = "fromBottom"
@@ -58,7 +58,7 @@ animation = ""
 command = "alacritty --class tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
 class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
 lazy = true
-size = "16% 17%"
+size = "19% 17%"
 unfocus = "hide"
 
 [scratchpads.btop]
