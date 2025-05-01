@@ -78,14 +78,14 @@ fe() {
 }
 
 fo() {
-	RG_PREFIX="rga --files-with-matches"
+	RG_PREFIX="fd --type f"
 	local file
 	file="$(
 		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
 			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
 				--phony -q "$1" \
 				--bind "change:reload:$RG_PREFIX {q}" \
-				--preview-window="up:75%"
+				--preview-window="up:0%"
 	)" &&
 	echo "opening $file" &&
 	xdg-open "$file"
@@ -116,6 +116,7 @@ alias ff='fastfetch'
 alias gc='git clone'
 alias wofi='wofi --show drun'
 alias hx='helix'
+alias xd='xdg-open'
 alias calculator='galculator & disown'
 alias shx='sudo -E helix'
 alias grep='grep --color=auto'
@@ -129,4 +130,7 @@ alias performance='powerprofilesctl set performance'
 alias wg-up='sudo wg-quick up'
 alias wg-down='sudo wg-quick down'
 alias update-mirrors='sudo reflector -l 15 -p https --ipv4 -c India --sort rate --save /etc/pacman.d/mirrorlist'
-
+alias sunset='hyprsunset -t 4000 & disown'
+alias sunrise='pkill hyprsunset'
+alias unzipall='for z in *.zip; do unzip "$z"; done' #unzips all zip files within a directory
+alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -'

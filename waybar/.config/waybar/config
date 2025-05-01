@@ -108,7 +108,7 @@
         "spacing": 0
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "Asia/Kolkata",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%d-%m-%Y}"
     },

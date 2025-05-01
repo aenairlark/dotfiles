@@ -29,7 +29,7 @@ wrap-indicator = ""  # set wrap-indicator to "↪" to have a symbol.
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = true
+snippets = true
 
 [editor.statusline]
 left = ["mode",  "file-name", "read-only-indicator", "total-line-numbers", "file-encoding"]
@@ -97,9 +97,8 @@ i = "command_mode"
 h = "file_picker_in_current_buffer_directory"
 f = "file_picker"
 
-
-
-
+[keys.normal.g]
+l = "goto_line_end_newline"
 
 
 # to have key map (S-e) working follow these

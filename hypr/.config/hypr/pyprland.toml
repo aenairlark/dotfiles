@@ -66,5 +66,5 @@ animation = ""
 command = "[term_classed] btop --title btop -e btop"
 class = "btop"
 lazy = true
-size = "45% 50%"
+size = "47% 50%"
 unfocus = "hide"
