@@ -3,6 +3,7 @@
 !.zshrc
 !.config
 # ignore in file picker or global search
+.var/
 .nix-defexpr
 .nix-profile
 .npm
