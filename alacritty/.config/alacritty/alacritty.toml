@@ -33,17 +33,11 @@ save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
+dynamic_title = true
 decorations = "Full"
 dynamic_padding = true
-opacity = 1.0
+opacity = 1
 startup_mode = "Windowed"
-
-# [window.class]
-# general = "Alacritty"
-
-# [window.dimensions]
-# columns = 160
-# lines = 45
 
 [window.padding]
 x = 10

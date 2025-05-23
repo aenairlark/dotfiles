@@ -23,6 +23,9 @@ export PATH="$PATH:/home/asim/.cargo/bin"
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+# Updates last command to alacritty
+preexec(){print -Pn "\e]0;$1\a"}
+
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
