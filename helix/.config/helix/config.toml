@@ -1,7 +1,6 @@
-# theme = "doom_acario_dark"
-# theme = "ayu_evolve"
-# theme = "material_deep_ocean"
-theme = "jetbrains_dark" 
+# theme = "onedark"
+theme = "everforest_dark"
+# theme = "jetbrains_dark" 
 
 [editor]
 line-number = "absolute"

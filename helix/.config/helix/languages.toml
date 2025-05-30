@@ -1,15 +1,7 @@
-# [language-server.emmet-ls]
-# args = ["--stdio"]
-# command="emmet-ls"
-
-# [[language]]
-# name = "html"
-# language-servers = ["vscode-html-language-server", "emmet-ls"]
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
 
 [[language]]
 name = "markdown"
-language-servers = [ "marksman", "ltex-ls-plus" ]
-
-[language-server.ltex-ls-plus.config]
-ltex.disabledRules = { "en-US" = ["PROFANITY"], "en-UK" = ["PROFANITY"] }
-ltex.dictionary = { "en-US" = ["builtin"], "en-UK" = ["builtin"] }
+language-servers = ["codebook", "markdown-oxide"]

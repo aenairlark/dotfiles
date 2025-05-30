@@ -29,6 +29,22 @@ max_size = "1920px 100%"
 unfocus = "hide"
 lazy = true
 
+[scratchpads.clock]
+animation = ""
+command = "alacritty --class tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
+class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
+lazy = true
+size = "19% 17%"
+unfocus = "hide"
+
+[scratchpads.btop]
+animation = ""
+command = "[term_classed] btop --title btop -e btop"
+class = "btop"
+lazy = true
+size = "60% 60%"
+unfocus = "hide"
+
 # [scratchpads.volume]
 # animation = "fromBottom"
 # command = "pavucontrol"
@@ -53,18 +69,3 @@ lazy = true
 # size = "40% 50%"
 # unfocus = ""
 
-[scratchpads.clock]
-animation = ""
-command = "alacritty --class tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
-class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
-lazy = true
-size = "19% 17%"
-unfocus = "hide"
-
-[scratchpads.btop]
-animation = ""
-command = "[term_classed] btop --title btop -e btop"
-class = "btop"
-lazy = true
-size = "47% 50%"
-unfocus = "hide"

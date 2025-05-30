@@ -136,4 +136,9 @@ alias update-mirrors='sudo reflector -l 15 -p https --ipv4 -c India --sort rate 
 alias sunset='hyprsunset -t 4500 & disown'
 alias sunrise='pkill hyprsunset'
 alias unzipall='for z in *.zip; do unzip "$z"; done' #unzips all zip files within a directory
-alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -'
+alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -' #run as su
+
+
+#Script Aliases
+alias ytm='~/scripts/yt.sh -m'
+alias yt='~/scripts/yt.sh'

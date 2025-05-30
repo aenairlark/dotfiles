@@ -3,6 +3,10 @@
 !.zshrc
 !.config
 # ignore in file picker or global search
+*.pdf
+*.mp4
+*.torrent
+*.bin
 .var/
 .nix-defexpr
 .nix-profile
