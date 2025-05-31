@@ -1,5 +1,5 @@
-@define-color cc-bg #32302f;
-@define-color noti-border-color #32302f;
+@define-color cc-bg #2d353b;
+@define-color noti-border-color #2d353b;
 @define-color noti-bg #3c3836;
 @define-color noti-bg-darker #3c3836;
 @define-color noti-bg-hover rgb(27, 27, 43);
@@ -9,8 +9,8 @@
 @define-color bg-selected #fabd2f;
  
 * {
-    font-family: JetBrainsMono NFP;
-    font-weight: bold;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
 	font-size: 14px
 }
  
@@ -22,12 +22,12 @@
  
 .notification-row {
     outline: none;
-    margin: 20px;
+    margin: 10px;
     padding: 0;
 }
  
 .notification {
-    background: transparent;
+    /* background: transparent; */
     margin: 0px;
 }
  
@@ -55,7 +55,9 @@
     transition: all .15s ease-in-out;
     border: none
 }
- 
+.control-center .notification {
+  box-shadow: none;
+} 
 .notification-action {
     color: #ebdbb2;
     border: 2px solid #85796f;
@@ -115,7 +117,6 @@
     padding: 5px 10px;
     margin: 10px 10px 5px 10px;
     font-size: 1.5rem;
-    border-radius: 5px;
 }
  
 .widget-title>button {
@@ -124,7 +125,6 @@
     text-shadow: none;
     background: @noti-bg;
     box-shadow: none;
-    border-radius: 5px;
 }
  
 .widget-title>button:hover {
@@ -136,7 +136,6 @@
     background: @noti-bg-darker;
     padding: 5px 10px;
     margin: 5px 10px 10px 10px;
-    border-radius: 5px;
     font-size: large;
     color: #f2e5bc;
 }
@@ -153,12 +152,12 @@
  
 .widget-dnd>switch slider {
     background: @cc-bg;
-    border-radius: 5px
+    border-radius: 4px
 }
  
 .widget-dnd>switch:checked slider {
     background: @cc-bg;
-    border-radius: 5px
+    border-radius: 4px
 }
  
 .widget-label {
@@ -179,7 +178,7 @@
 }
  
 .widget-mpris > box > button {
-    border-radius: 5px;
+    border-radius: 0px;
 }
  
 .widget-mpris-player {
@@ -200,14 +199,12 @@
     font-size: x-large;
     padding: 5px;
     margin: 5px 10px 10px 10px;
-    border-radius: 5px;
     background: @noti-bg-darker;
 }
  
 .widget-buttons-grid>flowbox>flowboxchild>button {
     margin: 3px;
     background: @cc-bg;
-    border-radius: 5px;
     color: @text-color
 }
  

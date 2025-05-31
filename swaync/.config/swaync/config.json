@@ -1,7 +1,6 @@
 
 {
- 
-    "$schema": "/etc/xdg/swaync/configSchema.json",
+     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
     "positionY": "top",
 	  "layer": "overlay",
@@ -16,8 +15,8 @@
     "timeout-low": 2,
     "timeout-critical": 0,
     "fit-to-screen": false,
-    "control-center-width": 500,
-    "control-center-height": 1025,
+    "control-center-width": 450,
+    "control-center-height": 725,
     "notification-window-width": 440,
     "keyboard-shortcuts": true,
     "image-visibility": "when-available",
@@ -29,9 +28,7 @@
         "title",
         "dnd",
         "notifications",
-		    "mpris",
-		    "volume",
-        "buttons-grid"
+		    "mpris"
     ],
     "widget-config": {
         "title": {
@@ -53,22 +50,6 @@
         "volume": {
             "label": "󰕾",
 			"show-per-app": true
-        },
-        "buttons-grid": {
-            "actions": [
-                {
-                    "label": "󰌾",
-                    "command": "hyprlock"
-                },
-                {
-                    "label": "󰍃",
-                    "command": "hyprctl dispatch exit"
-                },
-                {
-                    "label": "",
-                    "command": "systemctl suspend"
-                }
-            ]
         }
     }
 }
