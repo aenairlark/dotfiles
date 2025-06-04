@@ -9,14 +9,16 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser,window";
+	modi:                       "drun,,emoji,window,run"; /** can also add 'files' here if you want file-brwser **/
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
     display-filebrowser:        " Files";
+    display-emoji:              "󰇲 Emojis";
     display-window:             " Windows";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
+    kb-mode-next:               "Alt+Tab";
 }
 
 /*****----- Global Properties -----*****/

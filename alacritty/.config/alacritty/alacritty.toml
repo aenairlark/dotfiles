@@ -13,8 +13,13 @@ style = {shape = "Beam",blinking = "On"}
 
 [mouse]
 hide_when_typing = true
+
 [keyboard]
-bindings = [{ key = "Enter",mods = "Super",action= "CreateNewWindow" }]
+bindings = [
+        { key = "v", mods = "Control", action = "Paste"},
+        { key = "Enter",mods = "Super",action = "CreateNewWindow" }
+   ]
+
 [env]
 TERM = "alacritty"
 
