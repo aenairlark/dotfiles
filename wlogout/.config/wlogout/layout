@@ -1,36 +1,36 @@
  {
     "label" : "lock",
     "action" : "loginctl lock-session",
-    "text" : "        "
+    "text" : "  Lock  "
 }
 
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "        "    
+    "text" : " Suspend "    
 }
 
 {
     "label" : "logout",
     "action" : "loginctl terminate-user $USER",
-    "text" : "        "     
+    "text" : " Logout "     
 }
 
 {
     "label" : "hibernate",
     "action" : "systemctl hibernate",
-    "text" : "        "     
+    "text" : "Hibernate"     
 }
 
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "        "
+    "text" : "Power-off"
 }
 
 {
     "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "        "     
+    "text" : " Restart "     
 }
 

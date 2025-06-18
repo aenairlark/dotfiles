@@ -16,6 +16,8 @@ fi
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
+# editor
+export EDITOR=helix
 
 #PATH
 export PATH="$PATH:/home/asim/.cargo/bin"
@@ -41,10 +43,9 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
+bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
@@ -94,22 +95,14 @@ fo() {
 	xdg-open "$file"
 }
 
-# Find and remove files with fzf
-frm() {
-  # Use `find` to list files and directories, and pipe them to `fzf` for selection
-  selected=$(find . -type f -o -type d 2>/dev/null | fzf -m)
-  
-  # Check if any selection was made
-  if [[ -n "$selected" ]]; then
-    # Echo the files or directories that will be deleted
-    echo "Deleting the following files or directories:"
-    echo "$selected"
-    
-    # Use `xargs` to safely pass selected files/directories to `rm -rf`
-    echo "$selected" | xargs -d '\n' rm -rf
-  else
-    echo "No files or directories selected."
-  fi
+
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
 
 #Aliases
@@ -117,7 +110,6 @@ alias ls='ls --color'
 alias con='cd ~/.config'
 alias ff='fastfetch'
 alias gc='git clone'
-alias wofi='wofi --show drun'
 alias hx='helix'
 alias xd='xdg-open'
 alias calculator='galculator & disown'
