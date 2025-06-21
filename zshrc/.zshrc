@@ -43,7 +43,7 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -v
+bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -86,8 +86,7 @@ fo() {
 	local file
 	file="$(
 		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-				--phony -q "$1" \
+			fzf --sort  --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
 				--bind "change:reload:$RG_PREFIX {q}" \
 				--preview-window="up:0%"
 	)" &&
