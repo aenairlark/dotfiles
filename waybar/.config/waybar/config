@@ -162,8 +162,8 @@
      "bluetooth": {
 	"format": " {status}",
 	"format-disabled": "󰂲", // an empty format will hide the module
-	"format-connected": " connected",
-    "format-no-controller": "󰂲",  
+	"format-connected": " {device_alias}",
+    "format-no-controller": "󰂲 no-control",  
     "tooltip-format-no-controller":"no-controller", //run systemctl start bluetooth
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
@@ -173,15 +173,15 @@
     "pulseaudio": {
         // "scroll-step": 10, // %, can be a float
         "format": "{volume}%{icon}{format_source}",
-        "format-bluetooth": "{volume}% {icon}{format_source}",
-        "format-bluetooth-muted": " 󰖁 {icon}{format_source}",
+        "format-bluetooth": "{volume}% {format_source}",
+        "format-bluetooth-muted": "󰖁 {format_source}",
         "format-muted": "󰖁{format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted":"",
         "format-icons": {
-            "headphone": " ",
+            "headphone": " ",
             "hands-free": "",
-            "headset": " ",
+            "headset": "  ",
             "default": [" 󰕿"," 󰖀", " 󰕾"]
         },
         "on-click": "pavucontrol"
@@ -205,15 +205,5 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-    },
-    // "custom/updates": {
-    //     "format": "{} {icon}",
-    //     "return-type": "json",
-    //     "format-icons": {
-    //         "has-updates": "󱍷 ",
-    //         "updated": "󰂪 "
-    //     },
-    //     "exec-if": "which waybar-module-pacman-updates",
-    //     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
     }
 }

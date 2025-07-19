@@ -20,7 +20,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 export EDITOR=helix
 
 #PATH
-export PATH="$PATH:/home/asim/.cargo/bin"
+export PATH="$PATH:/home/asim/.cargo/bin" #for packages from cargo
+export PATH="$PATH:/home/asim/.nix-profile/bin/" #for packages from nix package manager
 
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -72,16 +73,16 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 #Quick cd using fd, it respects .ignore .gitignore
-fc() {
+function fc() {
   cd "$(fd | fzf --preview 'tree -C {} | head -200' --preview-window 'up:60%')"
 }
 
 # Find and edit using fzf
-fe() {
+function fe() {
   helix "$(fd --type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
 
-fo() {
+function fo() {
 	RG_PREFIX="fd --type f"
 	local file
 	file="$(
@@ -94,8 +95,7 @@ fo() {
 	xdg-open "$file"
 }
 
-
-
+# cd using yazi, on yazi exit goes to the dir where yazi left.
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
