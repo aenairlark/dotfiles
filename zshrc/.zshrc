@@ -103,6 +103,11 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+# opens a popup to select, create, delete tmux sessions
+# bindkey -s '^o' '~/scripts/s-cnt.sh\n'
+my-script_widget() '/home/asim/scripts/s-cnt.sh'
+zle -N my-script_widget
+bindkey '^o' my-script_widget
 
 #Aliases
 alias ls='ls --color'
