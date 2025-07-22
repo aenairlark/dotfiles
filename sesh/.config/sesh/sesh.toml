@@ -1,0 +1,18 @@
+[[session]]
+name = "Home"
+path = "/home/asim"
+startup_command = ""
+windows = [ "helix", "yazi" ]
+
+[[session]]
+name = "Downloads"
+path = "~/Downloads"
+startup_command = "yazi"
+
+[[window]]
+name = "helix"
+startup_script = "helix ~/Files/todo.md"
+
+[[window]]
+name = "yazi"
+startup_script = "yazi"

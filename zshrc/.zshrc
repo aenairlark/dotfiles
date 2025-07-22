@@ -81,7 +81,7 @@ function fc() {
 function fe() {
   helix "$(fd --type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
-
+# Find and open pdfs,images,files, using xdg-open
 function fo() {
 	RG_PREFIX="fd --type f"
 	local file
@@ -103,19 +103,17 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
-# opens a popup to select, create, delete tmux sessions
-# bindkey -s '^o' '~/scripts/s-cnt.sh\n'
-my-script_widget() '/home/asim/scripts/s-cnt.sh'
-zle -N my-script_widget
-bindkey '^o' my-script_widget
+# opens a popup to select, create, delete tmux sessions C-o
+bindkey -s '^o' '^u~/scripts/sesh-connect.sh\n'
+# below method is better but broke for some reason
+# my-script_widget() '/home/asim/scripts/sesh-connect.sh'
+# zle -N my-script_widget
+# bindkey '^o' my-script_widget
 
 #Aliases
-alias ls='ls --color'
-alias con='cd ~/.config'
+alias ls='eza --git --icons --color=always'
 alias ff='fastfetch'
-alias gc='git clone'
 alias hx='helix'
-alias xd='xdg-open'
 alias calculator='galculator & disown'
 alias shx='sudo -E helix'
 alias grep='grep --color=auto'
@@ -134,6 +132,7 @@ alias sunset='hyprsunset -t 4500 & disown'
 alias sunrise='pkill hyprsunset'
 alias unzipall='for z in *.zip; do unzip "$z"; done' #unzips all zip files within a directory
 alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -' #run as su
+alias t-new='tmux new-session -A -D -s 0'
 
 
 #Script Aliases
