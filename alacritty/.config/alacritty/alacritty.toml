@@ -4,10 +4,6 @@ import = [
     ]
 live_config_reload = true
 
-[terminal.shell]
-program = "/usr/bin/zsh" # <- Set your path
-# args = ["-l", "-c", "tmux attach || tmux"]
-
 [colors]
 draw_bold_text_with_bright_colors = true
 
@@ -43,11 +39,11 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-decorations = "Full"
+decorations = "None"
 dynamic_padding = false
 opacity = 1
 startup_mode = "Windowed"
 
 [window.padding]
-x = 2
+x = 0
 y = 0

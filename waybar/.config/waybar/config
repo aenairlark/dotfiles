@@ -168,7 +168,7 @@
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "alacritty --class bluetuith --title bluetuith -e bluetuith"
+    "on-click": "kitty --class bluetuith --title bluetuith -e bluetuith"
 },
     "pulseaudio": {
         // "scroll-step": 10, // %, can be a float

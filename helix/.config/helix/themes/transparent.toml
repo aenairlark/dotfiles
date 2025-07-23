@@ -1,3 +1,6 @@
-# inherits = "onedark"
-inherits = "jetbrains_dark"
-"ui.background" = { bg = ""}
+# inherits = "everforest_dark"
+
+# "ui.background" = "#303030"
+
+# [palette]
+# grey = "#000000"

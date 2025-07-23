@@ -1,6 +1,5 @@
-# theme = "onedark"
 theme = "everforest_dark"
-# theme = "jetbrains_dark" 
+# theme = "transparent"
 
 [editor]
 line-number = "absolute"
@@ -57,6 +56,8 @@ p = "paste_clipboard_before"
 C-p = "paste_clipboard_after"
 S-x = "extend_line_up"
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+C-h = "goto_line_start"
+C-l = "goto_line_end_newline"
 
 [keys.normal.space]
 i = "command_mode"
@@ -81,6 +82,8 @@ A-tab = "goto_next_buffer"
 A-S-tab = "goto_previous_buffer"
 y = "yank_to_clipboard"
 p = "paste_clipboard_before"
+C-h = "goto_line_start"
+C-l = "goto_line_end_newline"
 
 [keys.select.space]
 w = ":w"
