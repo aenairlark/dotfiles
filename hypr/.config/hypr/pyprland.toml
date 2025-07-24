@@ -7,7 +7,7 @@ plugins = [
 command = "fetch_client_menu"
 
 [pyprland.variables]
-term_classed = "kitty --class"
+term_classed = "alacritty --class"
 
 [scratchpads.term]
 animation = "fromTop"

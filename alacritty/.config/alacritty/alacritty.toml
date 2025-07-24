@@ -24,7 +24,7 @@ bindings = [
 TERM = "alacritty"
 
 [font]
-size = 14 
+size = 15 
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -40,7 +40,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 [window]
 dynamic_title = true
 decorations = "None"
-dynamic_padding = false
+dynamic_padding = true
 opacity = 1
 startup_mode = "Windowed"
 

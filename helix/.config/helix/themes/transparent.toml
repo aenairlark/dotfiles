@@ -1,6 +1,6 @@
-# inherits = "everforest_dark"
+inherits = "everforest_dark"
 
-# "ui.background" = "#303030"
+"ui.background" = ""
 
-# [palette]
-# grey = "#000000"
+ # [palette]
+ # grey = "#000000"

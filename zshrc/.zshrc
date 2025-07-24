@@ -106,9 +106,9 @@ function y() {
 # opens a popup to select, create, delete tmux sessions C-o
 bindkey -s '^o' '^u~/scripts/sesh-connect.sh\n'
 # below method is better but broke for some reason
-# my-script_widget() '/home/asim/scripts/sesh-connect.sh'
-# zle -N my-script_widget
-# bindkey '^o' my-script_widget
+ # my-script_widget() '/home/asim/scripts/sesh-connect.sh'
+ # zle -N my-script_widget
+ # bindkey '^o' my-script_widget
 
 #Aliases
 alias ls='eza --git --icons --color=always'

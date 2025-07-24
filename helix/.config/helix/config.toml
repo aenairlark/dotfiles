@@ -1,5 +1,4 @@
 theme = "everforest_dark"
-# theme = "transparent"
 
 [editor]
 line-number = "absolute"
@@ -66,8 +65,8 @@ w = ":w"
 q = ":q"
 f = "file_picker"
 h = "file_picker_in_current_buffer_directory"
-F = "file_picker_in_current_directory"
 x = ":buffer-close"
+y = ["yank_to_clipboard", "delete_selection"]
 
 [keys.insert]
 A-tab = "goto_next_buffer"
@@ -92,5 +91,3 @@ i = "command_mode"
 h = "file_picker_in_current_buffer_directory"
 f = "file_picker"
 
-[keys.normal.g]
-l = "goto_line_end_newline"
