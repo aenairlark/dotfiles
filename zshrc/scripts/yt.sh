@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 # DISCLAIMER: this script has been started solely by me (sayan01)
 # and has had contributions from others like Nicholas-Baron,
 # juanCortelezzi, and mfoep (refer to contributors on Github)
@@ -18,6 +18,7 @@ function usage () {
   echo "    -s query  search"
   echo "    -g / -r   gui mode (rofi/dmenu)"
   echo "    -m        music mode (audio only) [dont use with -r]"
+  echo "    -l        loop selected"
   echo "  nothing     use defaults (search from prompt)"
 	echo
 	echo "add channel names to the file $sublistpath to show them"
@@ -43,7 +44,7 @@ if [[ ${#} -eq 0 ]]; then
 fi
 
 # available flags
-optstring=":s:cgrhm"
+optstring=":s:cgrhml"
 
 defcmd="fzf"
 defaction="s"
@@ -54,8 +55,9 @@ guicmd="rofi -dmenu -i" #uncomment next line for dmenu
 promptcmd="$defcmd"
 action="$defaction"
 isGui="f"
-query=""
+query=""""
 mpv_options=""
+mpv_loop=""
 
 max_resolution="1080"
 max_fps="60"
@@ -97,7 +99,10 @@ if [[ $useDefaults = "f" ]]; then
                 promptcmd="$guicmd" ;;
             m)
                # make the mpv headless
-                mpv_options+="--no-video" ;;
+                 mpv_options+="--no-video" ;;
+            l)
+               # make the mpv headless
+                mpv_loop+="--loop-file=yes" ;;
             h)
                 # display help / usage
                 usage ;;
@@ -175,7 +180,7 @@ if [[ $action = "c" ]]; then
       id=$(echo -e "$ids" | grep -Fwm1 "$choice" | cut -d'	' -f1) # get id of choice
       echo -e "$choice\t($id)"
       case $id in
-          ???????????) mpv "$videolink$id" "$mpv_options" --ytdl-format="$ytdlformats";;
+          ???????????) mpv "$mpv_options" "$mpv_optionl" "$videolink$id" --ytdl-format="$ytdlformats";;
           *) exit ;;
       esac
     done
@@ -211,9 +216,9 @@ else
         echo -e "$choice\t($id)"
         case $id in
             # 11 digit id = video
-            ???????????) mpv "$videolink$id" $mpv_options --ytdl-format="$ytdlformats";;
+            ???????????) mpv $mpv_options $mpv_loop "$videolink$id" --ytdl-format="$ytdlformats";;
             # 34 digit id = playlist
-            ??????????????????????????????????) mpv "$playlink$id" $mpv_options --ytdl-format="$ytdlformats";;
+            ??????????????????????????????????) mpv $mpv_options $mpv_loop "$playlink$id" --ytdl-format="$ytdlformats";;
             *) exit ;;
         esac
     done

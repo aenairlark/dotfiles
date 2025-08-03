@@ -1,4 +1,4 @@
-@define-color cc-bg #2d353b;
+@define-color cc-bg #303030;
 @define-color noti-border-color #2d353b;
 @define-color noti-bg #3c3836;
 @define-color noti-bg-darker #3c3836;
@@ -11,24 +11,36 @@
 * {
   font-family: JetBrainsMono Nerd Font;
   font-weight: bold;
-	font-size: 14px
+	font-size: 14px;
 }
- 
-.control-center .notification-row:focus,
+.notification-row:focus{
+    opacity: 0;
+    background: #303030;
+    
+}
+
 .control-center .notification-row:hover {
     opacity: 1;
-    background: @noti-bg-darker
+    background: @noti-bg-darker;
 }
  
+/* .notification-background { */
+    /* border-radius: 0px; */
+    
+/* } */
 .notification-row {
     outline: none;
     margin: 10px;
     padding: 0;
+    border-radius: 0px;
 }
  
 .notification {
-    /* background: transparent; */
+    outline: none;
+    background: none;
     margin: 0px;
+    padding: 0;
+    border-radius: 0px;
 }
  
 .notification-content {
@@ -53,7 +65,7 @@
     box-shadow: none;
     background: #fabd2f;
     transition: all .15s ease-in-out;
-    border: none
+    border: none;
 }
 .control-center .notification {
   box-shadow: none;
@@ -81,7 +93,7 @@
 .time {
     font-size: 11px;
     color: #d79921;
-    margin-right: 24px
+    margin-right: 14px;
 }
  
 .body {
@@ -96,19 +108,19 @@
 }
  
 .control-center-list {
-    background: transparent
+    background: transparent;
 }
  
 .control-center-list-placeholder {
-    opacity: .5
+    opacity: .5;
 }
  
 .floating-notifications {
-    background: transparent
+    background: transparent;
 }
  
 .blank-window {
-    background: alpha(black, 0.1)
+    background: alpha(black, 0.1);
 }
  
 .widget-title {
@@ -152,12 +164,12 @@
  
 .widget-dnd>switch slider {
     background: @cc-bg;
-    border-radius: 4px
+    border-radius: 4px;
 }
  
 .widget-dnd>switch:checked slider {
     background: @cc-bg;
-    border-radius: 4px
+    border-radius: 4px;
 }
  
 .widget-label {
@@ -183,16 +195,16 @@
  
 .widget-mpris-player {
     padding: 5px 10px;
-    margin: 10px
+    margin: 10px;
 }
  
 .widget-mpris-title {
     font-weight: 700;
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
  
 .widget-mpris-subtitle {
-    font-size: 1.1rem
+    font-size: 1.1rem;
 }
  
 .widget-buttons-grid {
@@ -205,7 +217,7 @@
 .widget-buttons-grid>flowbox>flowboxchild>button {
     margin: 3px;
     background: @cc-bg;
-    color: @text-color
+    color: @text-color;
 }
  
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
@@ -215,10 +227,10 @@
  
 .widget-menubar>box>.menu-button-bar>button {
     border: none;
-    background: transparent
+    background: transparent;
 }
  
 .topbar-buttons>button {
     border: none;
-    background: transparent
+    background: transparent;
 }

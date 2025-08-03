@@ -1,7 +1,7 @@
 [[session]]
 name = "Home"
 path = "/home/asim"
-startup_command = ""
+startup_command = "ls"
 windows = [ "helix", "yazi" ]
 
 [[session]]

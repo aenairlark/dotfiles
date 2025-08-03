@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 sesh connect "$(sesh list --icons | fzf-tmux -p 80%,70% --margin="5,1" --border \
   --no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \

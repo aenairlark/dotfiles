@@ -106,9 +106,9 @@ function y() {
 # opens a popup to select, create, delete tmux sessions C-o
 bindkey -s '^o' '^u~/scripts/sesh-connect.sh\n'
 # below method is better but broke for some reason
- # my-script_widget() '/home/asim/scripts/sesh-connect.sh'
- # zle -N my-script_widget
- # bindkey '^o' my-script_widget
+# sesh-connect() '/home/asim/dotfiles/zshrc/scripts/sesh-connect.sh'
+# zle -N sesh-connect
+# bindkey '^o' sesh-connect
 
 #Aliases
 alias ls='eza --git --icons --color=always'
@@ -123,8 +123,8 @@ alias ..='cd ..'
 alias bon='sudo systemctl start bluetooth.service'
 alias bof='sudo systemctl stop bluetooth.service'
 alias cat='bat'
-alias power-saver='powerprofilesctl set power-saver'
-alias performance='powerprofilesctl set performance'
+alias power-saver='tuned-adm profile laptop-battery-powersave'
+alias performance='tuned-adm profile latency-performance'
 alias wg-up='sudo wg-quick up'
 alias wg-down='sudo wg-quick down'
 alias update-mirrors='sudo reflector -l 15 -p https --ipv4 -c India --sort rate --save /etc/pacman.d/mirrorlist'
