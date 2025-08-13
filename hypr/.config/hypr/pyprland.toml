@@ -34,7 +34,7 @@ animation = ""
 command = "[term_classed] tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
 class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
 lazy = true
-size = "21% 21%"
+size = "23% 21%"
 unfocus = "hide"
 
 [scratchpads.btop]

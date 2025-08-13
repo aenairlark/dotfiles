@@ -133,6 +133,7 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
+        "interval" : 30,
         "states": {
             "concerning":45,
             "warning": 35,

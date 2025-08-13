@@ -132,7 +132,6 @@ alias sunset='hyprsunset -t 4500 & disown'
 alias sunrise='pkill hyprsunset'
 alias unzipall='for z in *.zip; do unzip "$z"; done' #unzips all zip files within a directory
 alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -' #run as su
-alias t-new='tmux new-session -A -D -s 0'
 
 
 #Script Aliases
