@@ -61,12 +61,12 @@ C-l = "goto_line_end_newline"
 [keys.normal.space]
 i = "command_mode"
 space = "flip_selections"
+l = ":lsp-workspace-command"
 w = ":w"
 q = ":q"
 f = "file_picker"
 h = "file_picker_in_current_buffer_directory"
 x = ":buffer-close"
-y = ["yank_to_clipboard", "delete_selection"]
 
 [keys.insert]
 A-tab = "goto_next_buffer"

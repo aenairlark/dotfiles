@@ -81,7 +81,7 @@ function fc() {
 function fe() {
   helix "$(fd --type f | fzf --preview 'cat {}' --preview-window 'up:60%')"
 }
-# Find and open pdfs,images,files, using xdg-open
+# Find and open pdfs, images, files, using xdg-open
 function fo() {
 	RG_PREFIX="fd --type f"
 	local file
@@ -92,7 +92,8 @@ function fo() {
 				--preview-window="up:0%"
 	)" &&
 	echo "opening $file" &&
-	xdg-open "$file"
+	xdg-open "$file" &
+	disown
 }
 
 # cd using yazi, on yazi exit goes to the dir where yazi left.
@@ -105,10 +106,12 @@ function y() {
 }
 # opens a popup to select, create, delete tmux sessions C-o
 bindkey -s '^o' '^u~/scripts/sesh-connect.sh\n'
-# below method is better but broke for some reason
-# sesh-connect() '/home/asim/dotfiles/zshrc/scripts/sesh-connect.sh'
-# zle -N sesh-connect
-# bindkey '^o' sesh-connect
+# below method is better, but broke for some reason
+# sesh-connect() {
+#  	 ./scripts/sesh-connect.sh
+#  }
+#  zle -N sesh-connect
+#  bindkey '^o' sesh-connect
 
 #Aliases
 alias ls='eza --git --icons --color=always'
@@ -128,12 +131,12 @@ alias performance='tuned-adm profile latency-performance'
 alias wg-up='sudo wg-quick up'
 alias wg-down='sudo wg-quick down'
 alias update-mirrors='sudo reflector -l 15 -p https --ipv4 -c India --sort rate --save /etc/pacman.d/mirrorlist'
-alias sunset='hyprsunset -t 4500 & disown'
+alias sunset='hyprsunset -t 4000 & disown'
 alias sunrise='pkill hyprsunset'
 alias unzipall='for z in *.zip; do unzip "$z"; done' #unzips all zip files within a directory
 alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -' #run as su
 
 
 #Script Aliases
-alias ytm='~/scripts/yt.sh -m'
-alias yt='~/scripts/yt.sh'
+alias ytm='~/scripts/yt.sh'
+alias yt='youtube-tui'

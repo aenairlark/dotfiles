@@ -1,16 +1,3 @@
-#!/usr/bin/env zsh
-# DISCLAIMER: this script has been started solely by me (sayan01)
-# and has had contributions from others like Nicholas-Baron,
-# juanCortelezzi, and mfoep (refer to contributors on Github)
-# this script is not based off of any other work by anyone else,
-# nor is it made in association with anyone else, regardless of
-# their claims.
-
-# dependencies: mpv yt-dlp fzf rofi/dmenu grep (GNU grep)
-
-# NOTE:  if you dont have GNU grep you can replace grep with rg
-
-# explain usage
 function usage () {
   echo "usage: yt"
   echo "    -h        help"

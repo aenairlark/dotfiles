@@ -9,7 +9,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,,emoji,window,run"; /** can also add 'files' here if you want file-brwser **/
+	modi:                       "drun,emoji,window,run"; /** can also add 'files' here if you want file-brwser **/
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
