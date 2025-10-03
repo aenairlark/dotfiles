@@ -140,3 +140,4 @@ alias r-un-needed='sudo pacman -Qqd | pacman -Rsu -' #run as su
 #Script Aliases
 alias ytm='~/scripts/yt.sh'
 alias yt='youtube-tui'
+alias password='~/scripts/password.sh'
