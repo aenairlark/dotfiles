@@ -9,7 +9,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,emoji,window,run"; /** can also add 'files' here if you want file-brwser **/
+	modi:                       "drun,emoji,window,run"; /** can also add 'files' here if you want file-browser **/
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
@@ -17,6 +17,7 @@ configuration {
     display-emoji:              "󰇲 Emojis";
     display-window:             " Windows";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	emoji-format:               "{emoji} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
     kb-mode-next:               "Alt+Tab";
 }
