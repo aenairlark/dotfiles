@@ -6,7 +6,7 @@
 
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "loginctl lock-session && systemctl suspend",
     "text" : " Suspend "    
 }
 
