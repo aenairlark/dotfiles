@@ -158,7 +158,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠ ",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "iwgtk"
+        "on-click": "pkill iwgtk || iwgtk"
     },
      "bluetooth": {
 	"format": " {status}",
@@ -185,7 +185,7 @@
             "headset": "  ",
             "default": [" 󰕿"," 󰖀", " 󰕾"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pkill pavucontrol || pavucontrol"
     },
     "custom/notification": {
         "tooltip": true,
