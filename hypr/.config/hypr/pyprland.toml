@@ -7,7 +7,7 @@ plugins = [
 command = "fetch_client_menu"
 
 [pyprland.variables]
-term_classed = "alacritty --class"
+term_classed = "kitty --class"
 
 [scratchpads.term]
 animation = "fromTop"
@@ -31,10 +31,10 @@ lazy = true
 
 [scratchpads.clock]
 animation = ""
-command = "[term_classed] tty-clock -e tty-clock -C 3 -f %A-%d/%m/%y"
-class = "tty-clock" #alacritty dosent like tty-clock sometimes. 
+command = "[term_classed] peaclock -e peaclock"
+class = "peaclock" #alacritty dosent like tty-clock sometimes. 
 lazy = true
-size = "22% 21%"
+size = "50% 45%"
 unfocus = "hide"
 
 [scratchpads.btop]
