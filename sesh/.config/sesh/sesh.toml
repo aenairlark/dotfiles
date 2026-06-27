@@ -7,6 +7,7 @@ windows = [ "helix", "yazi" ]
 name = "Downloads"
 path = "~/Downloads"
 startup_command = "yazi"
+windows = [ "~" ]
 
 [[session]]
 name = "Root"
@@ -20,3 +21,8 @@ startup_script = "helix ~/Files/todo.md"
 [[window]]
 name = "yazi"
 startup_script = "yazi"
+
+[[window]]
+name = "~"
+startup_script = "cd"
+
